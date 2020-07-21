@@ -3,7 +3,7 @@ FROM zaycevnet/docker-ubuntu-openjdk-maven
 
 RUN set -eux; \
     apt-get update; \
-    apt-get install software-properties-common; \
+    apt-get install -y software-properties-common; \
     add-apt-repository ppa:jonathonf/ffmpeg-4; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
