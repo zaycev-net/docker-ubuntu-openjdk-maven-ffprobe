@@ -1,4 +1,4 @@
-FROM zaycevnet/docker-ubuntu-openjdk-maven
+FROM zaycevnet/docker-ubuntu-openjdk-maven:ubuntu18.04-openjdk13-maven3.6
 # https://github.com/zaycev-net/docker-ubuntu-openjdk-maven/blob/master/Dockerfile
 
 RUN set -eux; \
