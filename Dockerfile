@@ -1,15 +1,13 @@
-FROM zaycevnet/docker-ubuntu-openjdk-maven:ubuntu18.04-openjdk13-maven3.6
+FROM zaycevnet/docker-ubuntu-openjdk-maven:ubuntu20.04.1-openjdk14.0.2-maven3.6.3
 # https://github.com/zaycev-net/docker-ubuntu-openjdk-maven/blob/master/Dockerfile
 
 RUN set -eux; \
     apt-get update; \
     apt-get install -y software-properties-common; \
-    add-apt-repository ppa:jonathonf/ffmpeg-4; \
-    apt-get update; \
-    apt-get install -y --no-install-recommends \
-        ffmpeg; \
+    apt-get install -y ffmpeg; \
     rm -rf /var/lib/apt/lists/*; \
     # \
-    ffprobe -version;
+    ffprobe -version; \
+    ffmpeg -version;
 
 CMD ["bash"]
